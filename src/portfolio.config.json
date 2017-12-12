@@ -1,0 +1,19 @@
+{
+    "siteTitle": "Josh Grauer - UI/UX Designer and Full Stack Developer",
+    "name": "Josh Grauer",
+    "about": {
+        "photo": "profile-placeholder-500x500.png",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget urna tincidunt, faucibus neque ut, auctor augue. Sed et sollicitudin enim, sit amet porttitor augue. Nullam id sodales neque, eget tincidunt purus. Sed et blandit tortor. Cras lobortis, leo sed condimentum porta, risus tortor vehicula sem, vel maximus quam turpis sit amet nisi. Curabitur ipsum leo, volutpat at lectus in, egestas posuere felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p><p>Cras a magna nec leo maximus sodales. Pellentesque ante nisi, viverra nec fermentum sit amet, vehicula in tellus. Maecenas velit sapien, consectetur blandit nisi eget, fermentum vehicula elit. Vestibulum iaculis libero et commodo semper. Aenean a lorem ac risus porttitor placerat. Sed nec est eu erat dapibus cursus ac id purus. Morbi dui purus, dignissim et elit vel, vulputate bibendum mauris. Donec dictum risus eget tincidunt finibus.</p>"
+    },
+    "portfolio": {
+        "projects": [
+            {
+                "name": "myCTCA Redesign",
+                "description": "",
+                "screenshots": [
+                    "images/"
+                ]
+            }
+        ]
+    }
+}

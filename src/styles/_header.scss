@@ -1,0 +1,85 @@
+@import '_variables';
+
+$active-link-background-color: #e4e4e4;
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $header-height;
+    background-color: $background-color;
+    z-index: 1; // Make sure the header appears on top of the rotated profile picture
+    
+    #header-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: $max-width - ($content-horizontal-padding * 2);
+        height: $header-height - 1;
+        border-bottom: 1px solid #e4e4e4;
+        margin: 0 auto;
+        padding: 0 $content-horizontal-padding;
+        
+        #name {
+            flex: 0 0 auto;
+            font-family: 'Rock Salt', cursive;
+            font-size: 28px;
+            color: #565657;
+        }
+
+        #navigation {
+            flex: 1 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .navigation-link {
+                display: block;
+                padding: 10px 20px;
+
+                &:link,
+                &:visited,
+                &:hover,
+                &:active {
+                    text-decoration: none;
+                    color: black;
+                }
+
+                &:hover,
+                &:active {
+                    background-color: darken($background-color, 3);
+                }
+
+                &.active {
+                    background-color: $active-link-background-color;
+
+                    &:hover,
+                    &:active {
+                        background-color: darken($active-link-background-color, 3);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $max-width) {
+    #header {
+        height: $header-height-mobile;
+
+        #header-inner {
+            flex-direction: column;
+            height: $header-height-mobile - 1;
+
+            #name {
+                margin-top: 10px;
+            }
+
+            #navigation {
+                flex-grow: 0;
+                margin-top: 10px;
+            }
+        }
+    }
+}

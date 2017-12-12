@@ -1,0 +1,48 @@
+@import '_variables';
+@import '_header';
+@import '_about';
+@import '_portfolio';
+@import '_contact';
+
+html, body {
+    background-color: $background-color;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    margin: $header-height auto 0 auto;
+    padding: 0 $content-horizontal-padding;
+    max-width: $max-width - ($content-horizontal-padding * 2);
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    top: $header-height * -1; // offset by height of the fixed header
+    visibility: hidden;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    text-align: center;
+    color: #565657;
+    margin-bottom: 40px;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-top: 40px;
+}
+
+@media (max-width: $max-width) {
+    #content {
+        margin-top: $header-height-mobile;
+    }
+
+    .anchor {
+        top: $header-height-mobile * -1; // offset by height of the fixed header
+    }
+}
