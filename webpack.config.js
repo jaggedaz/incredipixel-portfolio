@@ -58,6 +58,7 @@ module.exports =  {
     devtool: 'source-map', // Generate source maps for debugging purposes
     devServer: {
         contentBase: '/dist',
-        stats: 'minimal'
+        stats: 'minimal',
+        port: 3000
     }
 };
