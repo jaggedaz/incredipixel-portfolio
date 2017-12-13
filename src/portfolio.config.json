@@ -9,9 +9,18 @@
         "projects": [
             {
                 "name": "myCTCA Redesign",
-                "description": "",
+                "description": "<p>Led in the re-design of the myCTCA Patient Portal incorporating a new mobile-first responsive design.</p>",
                 "screenshots": [
-                    "images/"
+                    "images/placeholder-150x350.png",
+                    "images/placeholder-350x150.png"
+                ]
+            },
+            {
+                "name": "myCTCA Mobile App Design",
+                "description": "<p>Led in the re-design of the myCTCA Patient Portal incorporating a new mobile-first responsive design.</p>",
+                "screenshots": [
+                    "images/placeholder-350x150.png",
+                    "images/placeholder-150x350.png"
                 ]
             }
         ]

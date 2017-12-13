@@ -1,3 +1,22 @@
+@import '_variables';
+
 #portfolio-section {
-    height: 2000px;
+    .project-name {
+        text-align: center;
+        font-size: 22px;
+        color: $heading-color;
+        margin-bottom: 20px;
+    }
+    
+    .project-description {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .project-screenshots {
+        .project-screenshot {
+            //display: none;
+            width: 100%;
+        }
+    }
 }
