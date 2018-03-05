@@ -1,3 +1,19 @@
 #contact-section {
-    height: 2000px;
+    text-align: center;
+    margin-bottom: 0;
+
+    #contact-social-links {
+        margin-top: 30px;
+
+        a {
+            text-decoration: none;
+
+            [class^="socicon-"],
+            [class*=" socicon-"] {
+                font-size: 200%;
+                color: #c1c1c1;
+                padding: 10px;
+            }
+        }
+    }
 }

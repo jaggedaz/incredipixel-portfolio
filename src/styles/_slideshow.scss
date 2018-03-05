@@ -1,0 +1,28 @@
+.slideshow {
+    position: relative;
+
+    .slideshow-slides {
+        img {
+            max-width: 100%;
+            max-height: 500px;
+            margin: 0 auto;
+        }
+    }
+
+    .slideshow-prev-button,
+    .slideshow-next-button {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        font-size: 24px;
+        font-weight: bold;
+        height: 100%;
+        padding: 0 20px;
+        cursor: pointer;
+    }
+
+    .slideshow-next-button {
+        right: 0;
+    }
+}

@@ -1,27 +1,66 @@
 {
     "siteTitle": "Josh Grauer - UI/UX Designer and Full Stack Developer",
     "name": "Josh Grauer",
+    "footerDescription": "&copy; 2017. Site created with <a href='https://github.com/jaggedaz/incredipixel-portfolio' target='_blank'>incredipixel portfolio</a>, free and open source.",
     "about": {
-        "photo": "profile-placeholder-500x500.png",
-        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget urna tincidunt, faucibus neque ut, auctor augue. Sed et sollicitudin enim, sit amet porttitor augue. Nullam id sodales neque, eget tincidunt purus. Sed et blandit tortor. Cras lobortis, leo sed condimentum porta, risus tortor vehicula sem, vel maximus quam turpis sit amet nisi. Curabitur ipsum leo, volutpat at lectus in, egestas posuere felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p><p>Cras a magna nec leo maximus sodales. Pellentesque ante nisi, viverra nec fermentum sit amet, vehicula in tellus. Maecenas velit sapien, consectetur blandit nisi eget, fermentum vehicula elit. Vestibulum iaculis libero et commodo semper. Aenean a lorem ac risus porttitor placerat. Sed nec est eu erat dapibus cursus ac id purus. Morbi dui purus, dignissim et elit vel, vulputate bibendum mauris. Donec dictum risus eget tincidunt finibus.</p>"
+        "photo": "profile.jpg",
+        "description": "<p style='font-size: 125%;'>Hi! I'm  Josh and this is my portfolio.</p><p>I'm a lifelong learner and software development is my passion. My wheelhouse is UX design and front-end development, but I enjoy working within all levels of the stack.</p><p>By the way, if you'd like to put together a simple portfolio like this one, I've made the source code available <a href='https://github.com/jaggedaz/incredipixel-portfolio' target='_blank'>on GitHub</a>. It's easy to setup, just one config file to edit!</p>"
     },
     "portfolio": {
         "projects": [
             {
                 "name": "myCTCA Redesign",
+                "roles": [
+                    "Design",
+                    "Development",
+                    "Information Architecture"
+                ],
+                "technologies": [
+                    "ASP.NET",
+                    "C#",
+                    "Entity Framework",
+                    "SQL Server"
+                ],
                 "description": "<p>Led in the re-design of the myCTCA Patient Portal incorporating a new mobile-first responsive design.</p>",
+                "thumbnail": "images/placeholder-350x150.png",
                 "screenshots": [
-                    "images/placeholder-150x350.png",
-                    "images/placeholder-350x150.png"
+                    "images/myctca-portal-1.png",
+                    "images/myctca-portal-2.png",
+                    "images/myctca-portal-3.png"
                 ]
             },
             {
                 "name": "myCTCA Mobile App Design",
+                "roles": [
+                    "Design",
+                    "Development",
+                    "Information Architecture"
+                ],
+                "technologies": [
+                    "ASP.NET",
+                    "C#",
+                    "Entity Framework",
+                    "SQL Server"
+                ],
                 "description": "<p>Led in the re-design of the myCTCA Patient Portal incorporating a new mobile-first responsive design.</p>",
+                "thumbnail":  "images/placeholder-150x350.png",
                 "screenshots": [
                     "images/placeholder-350x150.png",
                     "images/placeholder-150x350.png"
                 ]
+            }
+        ]
+    },
+    "contact": {
+        "description": "Want to get in touch?  Shoot me an e-mail at <a href='mailto:jaggedaz@gmail.com'>jaggedaz@gmail.com</a>.",
+        "socialLinks": [
+            {
+                "siteName": "linkedin",
+                "url": "https://www.linkedin.com/in/joshgrauer/"
+            },
+            {
+                "siteName": "github",
+                "url": "https://github.com/jaggedaz/"
             }
         ]
     }

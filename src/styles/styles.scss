@@ -3,13 +3,26 @@
 @import '_about';
 @import '_portfolio';
 @import '_contact';
+@import '_footer';
+@import '_modal';
+@import '_slideshow';
+@import '_project-modal';
 
 html, body {
     background-color: $background-color;
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 175%;
     margin: 0;
     padding: 0;
+}
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+    color: #0066ff;
 }
 
 #content {
@@ -26,14 +39,16 @@ html, body {
 }
 
 .section {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .section-title {
+    width: 100%;
     text-align: center;
     color: $heading-color;
     margin-bottom: 40px;
-    font-size: 18px;
+    font-size: 28px;
+    font-weight: 300;
     text-transform: uppercase;
     padding-top: 40px;
 }

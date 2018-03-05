@@ -10,6 +10,7 @@ $active-link-background-color: #e4e4e4;
     height: $header-height;
     background-color: $background-color;
     z-index: 1; // Make sure the header appears on top of the rotated profile picture
+    line-height: normal;
     
     #header-inner {
         display: flex;
