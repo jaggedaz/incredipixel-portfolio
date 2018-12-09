@@ -51,11 +51,11 @@ function loadPortfolio() {
         projectName.textContent = project.name;
         projectContainer.appendChild(projectName);
 
-        const projectDescription = document.createElement('div');
-        projectDescription.className = 'project-description';
-        projectDescription.innerHTML = project.description;
-        projectContainer.appendChild(projectDescription);
-        
+        const projectClientAndYear = document.createElement('div');
+        projectClientAndYear.className = 'project-client-and-year';
+        projectClientAndYear.textContent = `${ project.client }, ${ project.year }`;
+        projectContainer.appendChild(projectClientAndYear);
+
         projectContainer.addEventListener('click', () => handleProjectClick(project));
 
         document.getElementById('portfolio-section').appendChild(projectContainer);
@@ -95,8 +95,19 @@ function handleProjectClick(project) {
 
     // Update the displayed project info
     document.getElementById('project-modal-project-name').textContent = project.name;
-    document.getElementById('project-modal-project-roles').textContent = project.roles.join(', ');
-    document.getElementById('project-modal-project-technologies').textContent = project.technologies.join(', ');
+    document.getElementById('project-modal-project-client-and-year').textContent = `${ project.client }, ${ project.year }`;
+    if (project.roles) {
+        document.getElementById('project-modal-project-roles').innerHTML = `<strong>Project Roles:</strong> ${ project.roles.join(', ') }`;
+        document.getElementById('project-modal-project-roles').classList.remove('hidden');
+    } else {
+        document.getElementById('project-modal-project-roles').classList.add('hidden');
+    }
+    if (project.technologies) {
+        document.getElementById('project-modal-project-technologies').innerHTML = `<strong>Technologies:</strong> ${ project.technologies.join(', ') }`;
+        document.getElementById('project-modal-project-technologies').classList.remove('hidden');
+    } else {
+        document.getElementById('project-modal-project-technologies').classList.add('hidden');
+    }
     document.getElementById('project-modal-project-description').innerHTML = project.description;
 
     if (!projectSlideshow) {

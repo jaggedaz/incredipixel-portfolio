@@ -14,20 +14,25 @@ export default class {
 
         this.slides = document.createElement('div');
         this.slides.className = 'slideshow-slides';
-        this.setSlides(slideImagePaths);
         this.slideshow.appendChild(this.slides);
-
-        let prevSlideButton = document.createElement('div');
-        prevSlideButton.className = 'slideshow-prev-button';
-        prevSlideButton.innerHTML = '&#10094;';
-        prevSlideButton.addEventListener('click', () => this.showSlide(SlideToDisplay.PREV));
-        this.slideshow.appendChild(prevSlideButton);
         
-        let nextSlideButton = document.createElement('div');
-        nextSlideButton.className = 'slideshow-next-button';
-        nextSlideButton.innerHTML = '&#10095;';
-        nextSlideButton.addEventListener('click', () => this.showSlide(SlideToDisplay.NEXT));
-        this.slideshow.appendChild(nextSlideButton);
+        this.prevSlideButton = document.createElement('div');
+        this.prevSlideButton.className = 'slideshow-prev-button';
+        this.prevSlideButton.innerHTML = '&#10094;';
+        this.prevSlideButton.addEventListener('click', () => this.showSlide(SlideToDisplay.PREV));
+        this.slideshow.appendChild(this.prevSlideButton);
+        
+        this.nextSlideButton = document.createElement('div');
+        this.nextSlideButton.className = 'slideshow-next-button';
+        this.nextSlideButton.innerHTML = '&#10095;';
+        this.nextSlideButton.addEventListener('click', () => this.showSlide(SlideToDisplay.NEXT));
+        this.slideshow.appendChild(this.nextSlideButton);
+        
+        this.indicators = document.createElement('div');
+        this.indicators.className = 'slideshow-indicators';
+        this.slideshow.appendChild(this.indicators);
+        
+        this.setSlides(slideImagePaths);
     }    
     
     setSlides(slideImagePaths) {
@@ -35,10 +40,8 @@ export default class {
         this.slideCount = slideImagePaths.length;
         this.currentSlideIndex = 0;
 
-        // Clear out any already loaded slides
-        this.slides.innerHTML = '';
-
         // Load the slide image elements
+        this.slides.innerHTML = '';
         slideImagePaths.forEach((slideImagePath) => {
             let slideImage = document.createElement('img');
             slideImage.className = 'slideshow-slide';
@@ -48,30 +51,60 @@ export default class {
             this.slides.appendChild(slideImage);
         });
 
+        // Set the visibility of the previous and next icons
+        this.prevSlideButton.classList.add('hidden');
+        if (this.slideCount <= 1) this.nextSlideButton.classList.add('hidden');
+
+        // Load the slide indicators
+        this.indicators.innerHTML = '';
+        for (var i = 0; i < this.slideCount; i++) {
+            let indicator = document.createElement('div');
+            indicator.className = 'slideshow-indicator';
+            this.indicators.appendChild(indicator);
+        }
+
         // Show the first slide
         this.showSlide(SlideToDisplay.FIRST);
     }
 
     showSlide(slideToDisplay) {
-        // Hide the currently displayed slide
-        let currentlyDisplayedSlide = this.slides.querySelectorAll('.slideshow-slide').item(this.currentSlideIndex);
-        currentlyDisplayedSlide.style.display = 'none';
-    
-        // Set the next slide to display
+        // Set the index of the next slide to display
+        let newSlideIndex;
         switch (slideToDisplay) {
             case SlideToDisplay.FIRST:
-                this.currentSlideIndex = 0;
+                newSlideIndex = 0;
                 break;
             case SlideToDisplay.NEXT:
-                this.currentSlideIndex = this.currentSlideIndex === this.slideCount - 1 ? 0 : this.currentSlideIndex + 1;
+                newSlideIndex = this.currentSlideIndex === this.slideCount - 1 ? 0 : this.currentSlideIndex + 1;
                 break;
             case SlideToDisplay.PREV:
-                this.currentSlideIndex = this.currentSlideIndex === 0 ? this.slideCount - 1 : this.currentSlideIndex - 1;
+                newSlideIndex = this.currentSlideIndex === 0 ? this.slideCount - 1 : this.currentSlideIndex - 1;
                 break;
         }
+
+        // Hide the currently displayed slide and show the next one
+        const slides = this.slides.querySelectorAll('.slideshow-slide');
+        slides.item(this.currentSlideIndex).style.display = 'none';
+        slides.item(newSlideIndex).style.display = 'block';
+
+        // Show or hide the previous and next buttons
+        if (newSlideIndex === 0) {
+            this.prevSlideButton.classList.add('hidden');
+        } else {
+            this.prevSlideButton.classList.remove('hidden');
+        }
+        if (newSlideIndex === this.slideCount - 1) {
+            this.nextSlideButton.classList.add('hidden');
+        } else {
+            this.nextSlideButton.classList.remove('hidden');
+        }
     
-        // Show the slide
-        let nextSlideToDisplay = this.slides.querySelectorAll('.slideshow-slide').item(this.currentSlideIndex);
-        nextSlideToDisplay.style.display = 'block';
+        // Unselect the currently selected indicator and select the next one
+        const indicators = this.indicators.querySelectorAll('.slideshow-indicator');
+        indicators.item(this.currentSlideIndex).classList.remove('slideshow-indicator-selected');
+        indicators.item(newSlideIndex).classList.add('slideshow-indicator-selected');
+        
+        // Update the current slide index
+        this.currentSlideIndex = newSlideIndex;
     }
 }

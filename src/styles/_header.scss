@@ -1,6 +1,6 @@
 @import '_variables';
 
-$active-link-background-color: #e4e4e4;
+$active-link-background-color: #0066ff;
 
 #header {
     position: fixed;
@@ -54,6 +54,7 @@ $active-link-background-color: #e4e4e4;
 
                 &.active {
                     background-color: $active-link-background-color;
+                    color: white;
 
                     &:hover,
                     &:active {

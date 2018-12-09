@@ -39,9 +39,15 @@ $project-margin-bottom: 80px;
             font-size: 18px;
             color: $heading-color;
             margin-top: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
         }
         
+        .project-client-and-year {
+            text-transform: uppercase;
+            font-size: 70%;
+            color: #666;
+        }
+
         .project-summary {
             color: #666;
         }

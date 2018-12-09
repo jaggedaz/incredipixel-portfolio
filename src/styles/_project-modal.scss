@@ -1,7 +1,20 @@
 .project-modal-sub-heading {
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 24px;
     color: #666;
-    padding-bottom: 5px;
+}
+
+#project-modal-project-client-and-year {
+    text-transform: uppercase;
+    font-size: 70%;
+    color: #666;
+}
+
+#project-modal-project-roles,
+#project-modal-project-technologies {
+    &.hidden {
+        display: none;
+    }
 }
 
 #project-modal-project-description {

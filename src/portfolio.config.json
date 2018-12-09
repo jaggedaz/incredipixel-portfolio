@@ -9,20 +9,13 @@
     "portfolio": {
         "projects": [
             {
-                "name": "myCTCA Redesign",
-                "roles": [
-                    "Design",
-                    "Development",
-                    "Information Architecture"
-                ],
-                "technologies": [
-                    "ASP.NET",
-                    "C#",
-                    "Entity Framework",
-                    "SQL Server"
-                ],
-                "description": "<p>Led in the re-design of the myCTCA Patient Portal incorporating a new mobile-first responsive design.</p>",
-                "thumbnail": "images/placeholder-350x150.png",
+                "name": "myCTCA Patient Portal Redesign",
+                "client": "Cancer Treatment Centers of America",
+                "year": "2017",
+                "roles": ["UX Design", "Front-End Development", "Information Architecture"],
+                "technologies": ["Angular 2+", "TypeScript", "C#", "SQL Server"],
+                "description": "<p>Led in the re-design of the myCTCA Patient Portal and created an interactive prototype illustrating a new mobile-first design.</p>",
+                "thumbnail": "images/myctca-portal-1.png",
                 "screenshots": [
                     "images/myctca-portal-1.png",
                     "images/myctca-portal-2.png",
@@ -30,23 +23,114 @@
                 ]
             },
             {
-                "name": "myCTCA Mobile App Design",
-                "roles": [
-                    "Design",
-                    "Development",
-                    "Information Architecture"
-                ],
-                "technologies": [
-                    "ASP.NET",
-                    "C#",
-                    "Entity Framework",
-                    "SQL Server"
-                ],
-                "description": "<p>Led in the re-design of the myCTCA Patient Portal incorporating a new mobile-first responsive design.</p>",
-                "thumbnail":  "images/placeholder-150x350.png",
+                "name": "myCTCA Connect",
+                "client": "Cancer Treatment Centers of America",
+                "year": "2017",
+                "roles": ["UX Design", "Front-End Development"],
+                "technologies": ["Angular 2+", "TypeScript"],
+                "description": "<p>Designed and developed the web client for myCTCA Connect, a real-time secure messaging platform that enables patients to communicate directly with their care team.</p>",
+                "thumbnail": "images/myctca-connect-1.png",
                 "screenshots": [
-                    "images/placeholder-350x150.png",
-                    "images/placeholder-150x350.png"
+                    "images/myctca-connect-1.png",
+                    "images/myctca-connect-2.png"
+                ]
+            },
+            {
+                "name": "myCTCA Identity",
+                "client": "Cancer Treatment Centers of America",
+                "year": "2017",
+                "roles": ["UX Design", "Front-End Development", "Back-end Development"],
+                "technologies": ["Angular 2+", "TypeScript", "C#"],
+                "description": "<p>Helped architect and build out myCTCA Identity, a centralized identity provider implementing OAuth and OpenID Connect. Designed and developed the identity management user interface.</p>",
+                "thumbnail": "images/myctca-identity-1.png",
+                "screenshots": [
+                    "images/myctca-identity-1.png",
+                    "images/myctca-identity-2.png",
+                    "images/myctca-identity-3.png"
+                ]
+            },
+            {
+                "name": "StrongMind SIS",
+                "client": "StrongMind",
+                "year": "2016",
+                "roles": ["UX Design", "Front-End Development", "Back-end Development"],
+                "technologies": ["Knockout", "jQuery", "C#", "Entity Framework", "SQL Server"],
+                "description": "<p>As part of the SIS team I helped design and develop several features including the Student Course Roadmap, the Course Catalog Management tool, and many others. Also worked directly with an external client, Learn4Life, to design and implement custom attendance and grading modules that fit their unique processes.</p>",
+                "thumbnail": "images/strongmind-sis-1.jpg",
+                "screenshots": [
+                    "images/strongmind-sis-1.jpg",
+                    "images/strongmind-sis-2.jpg",
+                    "images/strongmind-sis-3.jpg"
+                ]
+            },
+            {
+                "name": "StrongMind LMS",
+                "client": "StrongMind",
+                "year": "2014",
+                "roles": ["UX Design", "Front-End Development", "Back-end Development"],
+                "technologies": ["Knockout", "jQuery", "C#", "Entity Framework", "SQL Server"],
+                "description": "<p>Worked as a full-stack developer on the LMS team. Worked on several projects including the build out of a new group project feature allowing students to chat and share documents with other group members in real-time.</p>",
+                "thumbnail": "images/strongmind-lms-1.jpg",
+                "screenshots": [
+                    "images/strongmind-lms-1.jpg",
+                    "images/strongmind-lms-2.jpg",
+                    "images/strongmind-lms-3.jpg"
+                ]
+            },
+            {
+                "name": "My Weigh 2 Prevent Diabetes",
+                "client": "Veridian Health Management",
+                "year": "2013",
+                "roles": ["UX Design", "Information Architecture"],
+                "technologies": null,
+                "description": "<p>Led in the design of an application built around the CDC’s National Diabetes Prevention Program. Translated the CDC’s program requirements into wireframes illustrating all application functionality and worked closely with an external development team to bring the application from concept to completed product within 8 weeks.</p>",
+                "thumbnail": "images/my-weigh-1.png",
+                "screenshots": [
+                    "images/my-weigh-1.png",
+                    "images/my-weigh-2.png",
+                    "images/my-weigh-3.png"
+                ]
+            },
+            {
+                "name": "Engage",
+                "client": "Revana",
+                "year": "2012",
+                "roles": ["UX Design", "Information Architecture", "Front-End Development"],
+                "technologies": ["WPF", "C#"],
+                "description": "<p>Led in the re-design and front end development of Engage, a custom CRM application. Conducted user interviews, performed competitive analysis, developed several functional prototypes, documented the design specication, and developed the application interface.</p>",
+                "thumbnail": "images/engage-1.png",
+                "screenshots": [
+                    "images/engage-1.png",
+                    "images/engage-2.png",
+                    "images/engage-3.png"
+                ]
+            },
+            {
+                "name": "Module Delivery System (MDS)",
+                "client": "Arizona State University",
+                "year": "2010",
+                "roles": ["UX Design", "Information Architecture", "Front-End Development", "Back-end Development"],
+                "technologies": ["Ext JS", "Yahoo! User Interface (YUI) Library", "Flex", "ColdFusion", "SQL Server"],
+                "description": "<p>Worked closely with Instructional Designers, Multimedia Developers, and other project stakeholders to design the new course authoring system and course viewer. As the sole developer on this project, I developed the application from front to back and successfully migrated all content from the old system to the new one.</p>",
+                "thumbnail": "images/mds-1.jpg",
+                "screenshots": [
+                    "images/mds-1.jpg",
+                    "images/mds-2.jpg",
+                    "images/mds-3.jpg"
+                ]
+            },
+            {
+                "name": "Pearson Digital Learning Intranet",
+                "client": "Pearson Digital Learning",
+                "year": "2006",
+                "roles": ["UX Design", "Information Architecture", "Front-End Development", "Back-end Development"],
+                "technologies": ["Yahoo! User Interface (YUI) Library", "ColdFusion", "SQL Server"],
+                "description": "<p>Re-designed the company intranet website from the ground up incorporating many new features including a custom search engine, a searchable employee roster, and a technical support knowledge base.</p>",
+                "thumbnail": "images/pearson-intranet-1.jpg",
+                "screenshots": [
+                    "images/pearson-intranet-1.jpg",
+                    "images/pearson-intranet-2.jpg",
+                    "images/pearson-intranet-3.jpg"
                 ]
             }
         ]
