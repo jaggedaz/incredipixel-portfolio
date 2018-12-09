@@ -11,7 +11,7 @@ module.exports =  {
     ],
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'public')
     },
     module: {
         loaders: [
@@ -47,7 +47,7 @@ module.exports =  {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']), // Wipe out the /dist folder every time we build
+        new CleanWebpackPlugin(['public']), // Wipe out the /public folder every time we build
         new HtmlWebpackPlugin({ template: './src/index.html' }), // Generate index.html that includes injected webpack bundles and CSS <link> tags
         new CopyWebpackPlugin([
             { from: './src/portfolio.config.json' }, // Copy our config file so that we can read it at runtime
@@ -57,7 +57,7 @@ module.exports =  {
     ],
     devtool: 'source-map', // Generate source maps for debugging purposes
     devServer: {
-        contentBase: '/dist',
+        contentBase: '/public',
         stats: 'minimal',
         port: 3000
     }
